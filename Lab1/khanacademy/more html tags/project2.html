@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Project: Recipe book</title>
+    <meta charset="utf-8">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(245, 245, 245);
+        }
+
+        h1 {
+            color: rgb(120, 40, 40);
+            text-align: center;
+        }
+
+        h2 {
+            color: rgb(60, 60, 120);
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+
+
+        .recipe {
+            background-color: rgb(255, 250, 230);
+            padding: 15px;
+            margin: 20px;
+            border-radius: 10px;
+        }
+
+        #contents {
+            background-color: rgb(230, 240, 255);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>My Recipe Book</h1>
+
+<h2>Contents:</h2>
+<ol id="contents">
+    <li><a href="#pancakes">Pancakes</a></li>
+    <li><a href="#pasta">Pasta Carbonara</a></li>
+    <li><a href="#salad">Fresh Salad</a></li>
+</ol>
+
+<div class="recipe">
+    <h2 id="pancakes">Pancakes</h2>
+
+    <ul>
+        <li>Time: 20 minutes</li>
+        <li>Serves: 2 people</li>
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ingredients</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Flour</td>
+                <td>1 cup</td>
+            </tr>
+            <tr>
+                <td>Milk</td>
+                <td>1 cup</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Step 1:</strong> Mix flour and milk together.</p>
+    <p><strong>Step 2:</strong> Cook on a hot pan until golden.</p>
+
+    <p><em>Source: <a href="https://en.wikipedia.org/wiki/Pancake">pancake</a></em></p>
+</div>
+
+<div class="recipe">
+    <h2 id="pasta">Pasta Carbonara</h2>
+
+    <ul>
+        <li>Time: 30 minutes</li>
+        <li>Serves: 3 people</li>
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ingredients</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pasta</td>
+                <td>200 g</td>
+            </tr>
+            <tr>
+                <td>Eggs</td>
+                <td>2</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ol>
+        <li>Boil the pasta.</li>
+        <li>Mix eggs with cheese.</li>
+        <li>Combine everything together.</li>
+    </ol>
+
+    <p><em>Source: <a href="https://en.wikipedia.org/wiki/Carbonara">carbonara</a></em></p>
+</div>
+
+<div class="recipe">
+    <h2 id="salad">Fresh Salad</h2>
+
+    <ul>
+        <li>Time: 10 minutes</li>
+        <li>Serves: 2 people</li>
+    </ul>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Ingredients</th>
+                <th>Quantity</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Tomatoes</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Cucumbers</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><strong>Step 1:</strong> Chop all vegetables.</p>
+    <p><strong>Step 2:</strong> Mix and add salt.</p>
+
+    <p><em>Source: <a href="https://en.wikipedia.org/wiki/Salad">salad</a></em></p>
+</div>
+
+</body>
+</html>
