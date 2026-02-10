@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let a = 0;
+alert( Boolean(a) ); // false
+
+let b = "0";
+alert( Boolean(b) ); // true
+
+alert(a == b); // true!
+
+
+//  A strict equality operator === checks the equality without type conversion.
+alert( 0 === false ); // false, because the types are different
+alert( null === undefined ); // false
+alert( null == undefined ); // true
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let user = { name: 'John' };
+
+let admin = user;
+
+admin.name = 'Pete'; // changed by the "admin" reference
+
+alert(user.name); // 'Pete', changes are seen from the "user" reference
+
+
+
+let a = {};
+let b = a; // copy the reference
+
+alert( a == b ); // true, both variables reference the same object
+alert( a === b ); // true
+
+
+let user1 = {
+  name: "John",
+  age: 30
+};
+
+let clone = {}; // the new empty object
+
+// let's copy all user properties into it
+for (let key in user1) {
+  clone[key] = user1[key];
+}
+
+// now clone is a fully independent object with the same content
+clone.name = "Pete"; // changed the data in it
+
+alert( user1.name ); // still John in the original object
+
+//clone
+
+let usser = {
+  name: "John",
+  age: 30
+};
+
+let clone = Object.assign({}, usser);
+
+alert(clone.name); // John
+alert(clone.age); // 30
+</script>

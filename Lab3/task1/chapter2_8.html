@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let x = 1;
+x = -x;
+alert( x ); // -1, unary negation was applied
+
+let x1 = 1, y1 = 3;
+alert( y1 - x1 ); // 2, binary minus subtracts values
+
+alert( 5 % 2 ); // 1, the remainder of 5 divided by 2
+alert( 8 % 3 ); // 2, the remainder of 8 divided by 3
+alert( 8 % 4 ); // 0, the remainder of 8 divided by 4
+
+alert( 2 ** 2 ); // 2² = 4
+alert( 2 ** 3 ); // 2³ = 8
+alert( 2 ** 4 ); // 2⁴ = 16
+
+alert(2 + 2 + '1' ); // "41" and not "221"
+
+alert('1' + 2 + 2); // "122" and not "14"
+
+let apples = "2";
+let oranges = "3";
+alert( apples + oranges ); // "23", the binary plus concatenates strings
+
+
+let apples1 = "2";
+let oranges1 = "3";
+// both values converted to numbers before the binary plus
+alert( +apples1 + +oranges1 ); // 5
+
+
+let n = 2;
+n += 5; // now n = 7 (same as n = n + 5)
+n *= 2; // now n = 14 (same as n = n * 2)
+alert( n ); // 14
+
+
+let counter = 2;
+counter++;        // works the same as counter = counter + 1, but is shorter
+alert( counter ); // 3
+
+
+let counter1 = 2;
+counter1--;        // works the same as counter = counter - 1, but is shorter
+alert( counter1 ); // 1
+
+//If we’d like to increase a value and immediately use the result of the operator, we need the prefix form:
+let counter2 = 1;
+let a1 = ++counter2; // (*)
+alert(a1); // 2
+
+// but!
+//If we’d like to increment a value but use its previous value, we need the postfix form:
+let counter3 = 1;
+let a2 = counter3++; // (*) changed ++counter to counter++
+alert(a2); // 1
+</script>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let user;
+alert(user ?? "Anonymous"); // Anonymous (user is undefined)
+
+let height = 0;
+alert(height || 100); // 100
+alert(height ?? 100); // 0
+
+let height1 = null;
+let width = null;
+
+// important: use parentheses
+let area = (height1 ?? 100) * (width ?? 50);
+
+alert(area); // 5000
+
+</script>

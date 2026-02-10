@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<script>
+"use strict";
+
+let fruit = prompt("Which fruit to buy?", "apple");
+
+let bag = {
+  [fruit]: 5, // the name of the property is taken from the variable fruit
+};
+
+alert( bag.apple ); // 5 if fruit="apple"
+
+
+
+let obj = {
+  for: 1,
+  let: 2,
+  return: 3
+};
+
+alert( obj.for + obj.let + obj.return );  // 6
+
+
+
+let user = { name: "John", age: 30 };
+
+alert( "age" in user ); // true, user.age exists
+alert( "blabla" in user ); // false, user.blabla doesn't exist
+
+
+
+
+let userr = {
+  name: "John",
+  age: 30,
+  isAdmin: true
+};
+
+for (let key in userr) {
+  // keys
+  alert( key );  // name, age, isAdmin
+  // values for the keys
+  alert( userr[key] ); // John, 30, true
+}
+
+
+let codes = {
+  "49": "Germany",
+  "41": "Switzerland",
+  "44": "Great Britain",
+  // ..,
+  "1": "USA"
+};
+
+for (let code in codes) {
+  alert(code); // 1, 41, 44, 49
+}
+
+//task1
+function isEmpty(obj) {
+  for (let key in obj) {
+    // if the loop has started, there is a property
+    return false;
+  }
+  return true;
+}
+
+//task2
+
+let salaries = {
+  John: 100,
+  Ann: 160,
+  Pete: 130
+};
+
+let sum = 0;
+for (let key in salaries) {
+  sum += salaries[key];
+}
+
+alert(sum);
+
+
+</script>

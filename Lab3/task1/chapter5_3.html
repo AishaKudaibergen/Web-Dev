@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<script>
+"use strict";
+
+let str = `Hello`;
+
+// the first character
+alert( str[0] ); // H
+alert( str.at(0) ); // H
+
+// the last character
+alert( str[str.length - 1] ); // o
+alert( str.at(-1) );
+
+
+alert( 'Interface'.toUpperCase() ); // INTERFACE
+alert( 'Interface'.toLowerCase() ); // interface
+
+//1
+function ucFirst(str) {
+  if (!str) return str;
+
+  return str[0].toUpperCase() + str.slice(1);
+}
+
+alert( ucFirst("john") ); // John
+
+//2
+function checkSpam(str) {
+  let lowerStr = str.toLowerCase();
+
+  return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+
+alert( checkSpam('buy ViAgRA now') );
+alert( checkSpam('free xxxxx') );
+alert( checkSpam("innocent rabbit") );
+
+
+
+</script>
