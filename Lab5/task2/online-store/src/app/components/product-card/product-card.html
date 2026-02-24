@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="image-preview" (click)="openModal(0)">
+    <img [src]="product.image" class="card-main-img" [alt]="product.name">
+    <div class="zoom-overlay">Нажмите для галереи</div>
+  </div>
+
+  <div class="product-info">
+    <h3>{{ product.name }}</h3>
+    <p class="description">{{ product.description }}</p>
+    <div class="meta">
+      <span class="price">{{ product.price | number }} ₸</span>
+      <span class="rating">⭐ {{ product.rating }}</span>
+    </div>
+  </div>
+
+  <div class="card-actions">
+    <a [href]="product.link" target="_blank" class="buy-btn">Открыть в Kaspi</a>
+    <div class="share-group">
+      <button (click)="shareWA()" class="share-btn wa" title="Share to WhatsApp">WhatsApp</button>
+      <button (click)="shareTG()" class="share-btn tg" title="Share to Telegram">Telegram</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" *ngIf="isModalOpen" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeModal()">&times;</button>
+    
+    <div class="modal-main">
+      <button class="nav-btn" (click)="prevImage($event)">❮</button>
+      <img [src]="product.images?.[currentImageIndex]" class="modal-img">
+      <button class="nav-btn" (click)="nextImage($event)">❯</button>
+    </div>
+
+    <div class="modal-thumbnails">
+      <img *ngFor="let img of product.images; let i = index" 
+           [src]="img" 
+           (click)="currentImageIndex = i"
+           [class.active]="i === currentImageIndex">
+    </div>
+  </div>
+</div>
