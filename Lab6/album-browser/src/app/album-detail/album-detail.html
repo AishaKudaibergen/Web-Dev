@@ -1,0 +1,21 @@
+<div style="padding: 20px;">
+  <div *ngIf="isLoading">
+    <h3>Идет загрузка...</h3>
+  </div>
+
+  <div *ngIf="!isLoading && album">
+    <h2>Album Details</h2>
+    <p>ID: {{ album.id }}</p>
+    
+    <div>
+      <label>Change title:</label>
+      <input [(ngModel)]="album.title" type="text" style="width: 300px;">
+      <button (click)="saveTitle()">Save Change</button>
+    </div>
+
+    <div style="margin-top: 20px;">
+      <button (click)="goBack()">Back</button>
+      <button [routerLink]="['/albums', album.id, 'photos']">View Photos</button>
+    </div>
+  </div>
+</div>

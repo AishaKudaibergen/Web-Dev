@@ -1,0 +1,17 @@
+<div class="albums-container">
+  <h2>Albums List</h2>
+
+
+    <div class="albums-grid">
+      @for (album of albums; track album.id) {
+        <div class="album-item">
+          <div class="album-card" [routerLink]="['/albums', album.id]" style="cursor: pointer; border: 1px solid #ccc; margin: 5px; padding: 10px;">
+  <strong>ID: {{ album.id }}</strong>
+  <p>{{ album.title }}</p>
+</div>
+          <button (click)="deleteAlbum(album.id, $event)" class="delete-btn">Delete</button>
+        </div>
+      }
+    </div>
+  
+</div>

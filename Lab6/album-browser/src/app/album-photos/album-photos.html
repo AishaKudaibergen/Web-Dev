@@ -1,0 +1,16 @@
+<div class="container" style="padding: 20px;">
+  <h3>Photos of Album #{{ albumId }}</h3>
+  <button [routerLink]="['/albums', albumId]">Back to Album</button>
+  <hr>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+    @for (photo of photos; track photo.id) {
+      <div style="border: 1px solid #ddd; padding: 10px; width: 150px; border-radius: 8px; text-align: center;">
+        <img [src]="photo.thumbnailUrl" [alt]="photo.title" style="width: 100%; border-radius: 4px;">
+        <p style="font-size: 11px; margin-top: 5px; height: 40px; overflow: hidden;">{{ photo.title }}</p>
+      </div>
+    } @empty {
+      <p>Фотографии не найдены или еще загружаются...</p>
+    }
+  </div>
+</div>
