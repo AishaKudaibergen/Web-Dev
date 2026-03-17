@@ -13,7 +13,6 @@ import { AlbumService } from '../services/album';
   styleUrls: ['./album-detail.css']
 })
 export class AlbumDetail implements OnInit {
-  // Добавь ! вот сюда. Это "заткнет" ошибку TS2532
   album!: Album; 
   isLoading = true;
 
@@ -21,7 +20,7 @@ export class AlbumDetail implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private albumService: AlbumService,
-    private cdr: ChangeDetectorRef // для принудительного обновления
+    private cdr: ChangeDetectorRef 
   ) {}
 
   ngOnInit(): void {
